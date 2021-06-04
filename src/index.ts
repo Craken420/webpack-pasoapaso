@@ -1,4 +1,4 @@
-
+import './style.css'
 //ECMA6
 let xECMA6: string = 'can be accessed globally';
 const piECMA6: number = 3.14;
