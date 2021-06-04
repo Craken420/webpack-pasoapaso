@@ -5,3 +5,11 @@ npm i -D babel-loader @babel/core @babel/preset-env @babel/polyfill
 npm i -g typescript
 npm i -D typescript ts-loader
 tcs-init
+npm i -g eslint
+npm i -D eslint eslint-loader
+eslint --init
+npm i -D style-loader css-loader
+
+npm i
+    postcss-loader // postcss: motor transpilador;
+    postcss-cssnext // CSSNext: plugin para transpilar
