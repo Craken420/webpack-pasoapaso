@@ -4,10 +4,10 @@ const htmlWebpakcPlugin = require('html-webpack-plugin');
 module.exports = {
     mode: 'production',
     resolve: {
-        extensions: ['.js']
+        extensions: ['.js', '.ts']
     },
     entry: {
-        app: ['@babel/polyfill', './src/index.js'],
+        app: ['@babel/polyfill', './src/index.ts'],
     },
     output: {
         path: path.join(__dirname, 'dist'),
@@ -20,6 +20,11 @@ module.exports = {
                 test: /\.js/,
                 exclude: /node_modules/,
                 use: ['babel-loader']
+            },
+            {
+                test: /\.ts/,
+                exclude: /node_modules/,
+                use: ['ts-loader']
             }
         ]
     },

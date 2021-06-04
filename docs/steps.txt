@@ -1,0 +1,7 @@
+npm init -y
+npm i webpack webpack-cli -D
+npm i -D html-webpack-plugin
+npm i -D babel-loader @babel/core @babel/preset-env @babel/polyfill
+npm i -g typescript
+npm i -D typescript ts-loader
+tcs-init
