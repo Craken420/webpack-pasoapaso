@@ -2,17 +2,26 @@ const path = require('path');
 const htmlWebpakcPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     resolve: {
-        extensions: ['js']
+        extensions: ['.js']
     },
     entry: {
-        app: ['./src/index.js']
+        app: ['@babel/polyfill', './src/index.js'],
     },
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: '[chunkhash].[name].js',
+        filename: '[chunkhash][name].js',
         clean: true
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js/,
+                exclude: /node_modules/,
+                use: ['babel-loader']
+            }
+        ]
     },
     plugins: [
         new htmlWebpakcPlugin({
