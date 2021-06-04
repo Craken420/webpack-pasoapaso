@@ -1,0 +1,40 @@
+// Variables
+@header-font: Arial;
+@color-aqua: #8dcdd8;
+@color-green: #8dd891;
+.div1 {
+    background-color: @color-aqua;
+    padding: 80px/2;
+    font-family: @header-font;
+}
+
+// Nesting
+#demo h1 {
+    font-size: 60px;
+    font-weight: bold;
+}
+#demo p {
+    font-size: 15px;
+}
+#demo p a {
+    color: #a83298;
+    padding: 50px;
+    background-color: @color-aqua;
+}
+#demo p a:hover {
+    background-color: @color-green;
+}
+
+// Mixin
+.concrete_border_top {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.tabBrd {
+    background: #333;
+    color:#fff;
+    .concrete_border_top;
+}
+.submitBtn {
+    .concrete_border_top;
+}

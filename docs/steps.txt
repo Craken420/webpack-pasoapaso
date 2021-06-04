@@ -13,3 +13,6 @@ npm i -D style-loader css-loader
 npm i
     postcss-loader // postcss: motor transpilador;
     postcss-cssnext // CSSNext: plugin para transpilar
+
+npm i -D less less-loader
+npm i -D mini-css-extract-plugin
