@@ -8,11 +8,11 @@ module.exports = {
         extensions: ['.js', '.ts']
     },
     entry: {
-        app: ['@babel/polyfill', './src/index.ts'],
+        app: ['@babel/polyfill', './src/index.js'],
     },
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: '[chunkhash][name].js',
+        filename: 'assets/js/[hash][name].js',
         clean: true
     },
     module: {
@@ -25,7 +25,7 @@ module.exports = {
             {
                 test: /\.ts$/,
                 exclude: /node_modules/,
-                use: ['ts-loader']
+                use: 'ts-loader'
             },
             {
                 test: /\.css$/,
@@ -45,7 +45,19 @@ module.exports = {
                     'postcss-loader',
                     'less-loader'
                 ]
-            }
+            },
+            {
+                test: /\.(png|jp(e*)g|svg)$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        limit: 8000,
+                        name: '[name]-[hash].[ext]',
+                        outputPath: 'assets/images/',
+                        publicPath: 'assets/images/'
+                    }
+                }]
+              }
         ]
     },
     plugins: [
@@ -55,8 +67,7 @@ module.exports = {
             template: 'src/index.html'
         }),
         new CssMiniExtract({
-            filename: '[name].css',
-            chunkFilename: '[id].css'
+            filename: 'assets/css/[hash]-[name].css',
         })
     ]
 }

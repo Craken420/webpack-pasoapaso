@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
+    "build": "webpack",
     "dev": "webpack-dev-server --inline --hot",
     "test": "karma start"
   },
@@ -24,6 +24,7 @@
     "css-loader": "^5.2.6",
     "eslint": "^7.27.0",
     "eslint-loader": "^4.0.2",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
     "jasmine-core": "^3.7.1",
     "karma": "^6.3.3",
@@ -38,6 +39,7 @@
     "style-loader": "^2.0.0",
     "ts-loader": "^9.2.2",
     "typescript": "^4.3.2",
+    "url-loader": "^4.1.1",
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.11.2"
