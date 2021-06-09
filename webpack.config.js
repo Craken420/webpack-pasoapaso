@@ -8,7 +8,7 @@ module.exports = {
         extensions: ['.js', '.ts']
     },
     entry: {
-        app: ['@babel/polyfill', './src/index.js'],
+        app: ['@babel/polyfill', './src/index.ts'],
     },
     output: {
         path: path.join(__dirname, 'dist'),

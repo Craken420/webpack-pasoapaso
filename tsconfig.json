@@ -11,5 +11,7 @@
       "es2015.promise",
       "es5"
     ]
-  }
+  },
+  "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"],
+  "include": ["src", "index.d.ts"]
 }

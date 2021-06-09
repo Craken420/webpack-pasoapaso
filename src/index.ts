@@ -1,8 +1,9 @@
 import './style.less';
-// import CopySolid from './images/copy-solid.svg';
-// import Lockolid from './images/lock-solid.svg';
-// import Logos from './images/LOGOS.jpg';
-// import Security from './images/security.svg';
+
+import CopySolid from './assets/images/copy-solid.svg';
+import LockSolid from './assets/images/lock-solid.svg';
+import Logos from './assets/images/LOGOS.jpg';
+import Security from './assets/images/security.svg';
 
 //ECMA6
 let xECMA6: string = 'can be accessed globally';
@@ -47,26 +48,27 @@ let url = 'https://blog.pleets.org/img/articles/webpack-process.png'
 imgen.src = url;
 document.body.appendChild(imgen);
 
-const elemCopySolid = window.document.getElementById("copy-solid");
+
+let elemCopySolid = <HTMLInputElement>document.getElementById('copy-solid');
 
 if (elemCopySolid !== null) {
-    elemCopySolid.innerHTML = toyotaECMA6.honk();
+    elemCopySolid.src = CopySolid;
 }
 
-const elemLockSolid = window.document.getElementById("lock-solid");
+let elemLockSolid = <HTMLInputElement>document.getElementById('lock-solid');
 
 if (elemLockSolid !== null) {
-    elemLockSolid.innerHTML = toyotaECMA6.honk();
+    elemLockSolid.src = LockSolid;
 }
 
-const elemLogos = window.document.getElementById("logos");
+let elemLogos = <HTMLInputElement>document.getElementById('logos');
 
 if (elemLogos !== null) {
-    elemLogos.innerHTML = toyotaECMA6.honk();
+    elemLogos.src = Logos;
 }
 
-const elemSecurity = window.document.getElementById("security");
+let elemSecurity = <HTMLInputElement>document.getElementById('security');
 
 if (elemSecurity !== null) {
-    elemSecurity.innerHTML = toyotaECMA6.honk();
+    elemSecurity.src = Security;
 }
