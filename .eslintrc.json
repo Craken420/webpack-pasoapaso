@@ -17,5 +17,5 @@
     ],
     "rules": {
     },
-    "globals": { "PRODUCTION": true }
+    "globals": { "ENV": "" }
 }
