@@ -3,7 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CssMiniExtract = require('mini-css-extract-plugin');
 
 module.exports = {
-    mode: 'production',
+    mode: 'development',
+    devtool: 'inline-source-map', // Depurar elcódigo compilado
     resolve: {
         extensions: ['.js', '.ts']
     },
@@ -32,8 +33,8 @@ module.exports = {
                 exclude: /node_modules/,
                 use: [
                     CssMiniExtract.loader,
-                    'css-loader',
-                    'postcss-loader'
+                   { loader: 'css-loader', options: { sourceMap: true } },
+                   { loader: 'postcss-loader', options: { sourceMap: true } }
                 ]
             },
             {
@@ -41,9 +42,9 @@ module.exports = {
                 exclude: /node_modules/,
                 use: [
                     CssMiniExtract.loader,
-                    'css-loader',
-                    'postcss-loader',
-                    'less-loader'
+                    { loader: 'css-loader', options: { sourceMap: true } },
+                    { loader: 'postcss-loader', options: { sourceMap: true } },
+                    { loader: 'less-loader', options: { sourceMap: true } }
                 ]
             },
             {
