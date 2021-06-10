@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --config webpack.config.js",
+    "build-prod": "webpack --config webpack.config.prod.js",
     "dev": "webpack-dev-server --inline --hot",
     "test": "karma start"
   },
@@ -22,6 +23,7 @@
     "@typescript-eslint/parser": "^4.26.0",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.6",
+    "css-minimizer-webpack-plugin": "^3.0.1",
     "eslint": "^7.27.0",
     "eslint-loader": "^4.0.2",
     "file-loader": "^6.2.0",
@@ -37,6 +39,7 @@
     "postcss-cssnext": "^3.1.0",
     "postcss-loader": "^5.3.0",
     "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^5.1.3",
     "ts-loader": "^9.2.2",
     "typescript": "^4.3.2",
     "url-loader": "^4.1.1",
