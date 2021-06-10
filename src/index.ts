@@ -72,3 +72,5 @@ let elemSecurity = <HTMLInputElement>document.getElementById('security');
 if (elemSecurity !== null) {
     elemSecurity.src = Security;
 }
+declare var PRODUCTION: string;
+console.log(PRODUCTION)

@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "build-prod": "webpack --config webpack.config.prod.js",
+    "build-dev-file": "webpack --config webpack.config.dev.js",
+    "build-prod-file": "webpack --config webpack.config.prod.js",
+    "nomenclatura-cli": "webpack --env.NODE_ENV=local --env.production --progress",
+    "build-dev": "SET NODE_ENV=development&& webpack --config=webpack.config.js",
+    "build-prod": "SET NODE_ENV=production&& webpack --config=webpack.config.js",
     "dev": "webpack-dev-server --inline --hot",
     "test": "karma start"
   },
